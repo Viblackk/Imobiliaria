@@ -16,11 +16,22 @@
     <body>
         <h1>Tela de cadastro</h1>
         <form name="cadastro_imovel" action="#" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
+            <div>
                 Nome:
                 <input type="text" name="nome" id="nome">
             </div>
+            <div>
+                Descrição:
+                <input type="text" name="descricao" id="descricao">
+            </div>
+            <div>
+                Preço:
+                <input type="text" name="preco" id="preco">
+            </div>
+            <div>
+                Preço:
+                <input type="text" name="preco" id="preco">
+            </div>
         </form>
-        
     </body>
 </html>
