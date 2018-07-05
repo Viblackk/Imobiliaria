@@ -23,4 +23,11 @@ public class OurobensController {
            
     }
     
+    @RequestMapping("/cadastroImovel")
+    public String cadastro_imovel(){
+        
+        return "cadastro_imovel";
+        
+    }
+    
 }
