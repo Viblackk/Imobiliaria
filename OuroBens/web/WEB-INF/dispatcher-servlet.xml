@@ -10,7 +10,7 @@ xml version='1.0' encoding='UTF-8' ?>
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" xmlns:mvc="http://www.springframework.org/schema/mvc">
 
     <mvc:annotation-driven />
-    <context:component-scan base-package="" />
+    <context:component-scan base-package="br.com.ourobens" />
     
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
