@@ -28,6 +28,8 @@ public class Conexao {
         } catch (ClassNotFoundException e) {
             System.out.println("Classe não encontrada, adicione o driver nas bibliotecas");
             java.util.logging.Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, e);
+        } catch(SQLException e){
+            System.out.println(e);
         }
     }
     
