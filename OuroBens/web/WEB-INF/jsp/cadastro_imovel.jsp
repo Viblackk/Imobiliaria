@@ -26,7 +26,7 @@
             </div>
             <div>
                 Preço:
-                <input type="number" name="preco" id="preco" required="">
+                <input type="text" name="preco" id="preco" required="">
             </div>
             <div>
                 Endereço:
@@ -34,7 +34,7 @@
             </div>
             <div>
                 Fotos da residência:
-                <input type="file" name="fotos_residencia" id="fotos_residencia" required="">
+                <input type="file" name="imagem_residencia" id="imagem_residencia" required="">
             </div>
             <div>
                 <input type="submit" id="btn_enviar" value="Cadastrar" required="">
