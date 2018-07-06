@@ -18,19 +18,26 @@
         <form name="cadastro_imovel" action="#" method="POST" enctype="multipart/form-data">
             <div>
                 Nome:
-                <input type="text" name="nome" id="nome">
+                <input type="text" name="nome" id="nome" required="">
             </div>
             <div>
                 Descrição:
-                <input type="text" name="descricao" id="descricao">
+                <input type="text" name="descricao" id="descricao" required="">
             </div>
             <div>
                 Preço:
-                <input type="text" name="preco" id="preco">
+                <input type="number" name="preco" id="preco" required="">
             </div>
             <div>
-                Preço:
-                <input type="text" name="preco" id="preco">
+                Endereço:
+                <input type="text" name="endereco" id="endereco" required="">
+            </div>
+            <div>
+                Fotos da residência:
+                <input type="file" name="fotos_residencia" id="fotos_residencia" required="">
+            </div>
+            <div>
+                <input type="submit" id="btn_enviar" value="Cadastrar" required="">
             </div>
         </form>
     </body>
