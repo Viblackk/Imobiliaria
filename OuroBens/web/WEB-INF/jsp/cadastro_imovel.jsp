@@ -15,7 +15,7 @@
     </head>
     <body>
         <h1>Tela de cadastro</h1>
-        <form name="cadastro_imovel" action="#" method="POST" enctype="multipart/form-data">
+        <form name="cadastro_imovel" action="olaMundo" method="POST" enctype="multipart/form-data">
             <div>
                 Nome:
                 <input type="text" name="nome" id="nome" required="">

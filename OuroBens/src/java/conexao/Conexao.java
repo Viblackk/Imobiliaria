@@ -3,34 +3,52 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conexao;
+package br.com.empregafacil.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import jdk.internal.instrumentation.Logger;
+import java.sql.Statement;
 
 /**
  *
- * @author Genocide
+ * @author aluno
  */
 public class Conexao {
-    
-    private Connection conn;
-    
-    private void conectar() throws SQLException{
-        System.out.println("Conectando...");
+
+    public static Connection getConnection() throws Exception {
         try {
             Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ourobens", "admin", "pedepano123");
-            System.out.println("Conectado");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Classe não encontrada, adicione o driver nas bibliotecas");
-            java.util.logging.Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, e);
-        } catch(SQLException e){
-            System.out.println(e);
+            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/ourobens", "postgres", "pedepano123");
+        } catch (Exception ex) {
+            throw new Exception(ex.getMessage());
         }
+    }
+
+    private static void close(Connection conn, Statement stmt, ResultSet rs) throws SQLException, Exception {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stmt != null) {
+                stmt.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (Exception ex) {
+            throw new Exception(ex.getMessage());
+        }
+    }
+    public static void closeConnection(Connection conn) throws Exception{
+        close(conn,null,null);
+    }
+    public static void closeConnection(Connection conn,Statement stmt) throws Exception{
+        close(conn,stmt,null);
+    }
+    public static void closeConnection(Connection conn, Statement stmt, ResultSet rs) throws Exception{
+        close(conn,stmt,rs);
     }
     
 }

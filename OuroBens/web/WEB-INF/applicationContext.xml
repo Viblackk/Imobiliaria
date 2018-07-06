@@ -17,7 +17,7 @@
     class="org.springframework.jdbc.datasource.DriverManagerDataSource"
     p:driverClassName="${org.postgresql.Driver}"
     p:url="${jdbc:postgresql://localhost:5432/ourobens}"
-    p:username="${jdbc.admin}"
+    p:username="${jdbc.postgres}"
     p:password="${jdbc.pedepano123}" />
 
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
