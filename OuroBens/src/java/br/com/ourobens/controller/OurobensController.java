@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class OurobensController {
     
     @RequestMapping("/olaMundo")
-    public String ourobens(Model model, @RequestParam("nome") String nome){
+    public String ourobens(Model model, @RequestParam("nomeImovel") String nomeImovel){
         
-        model.addAttribute("nome",nome);
+        model.addAttribute("nomeImovel", nomeImovel);
         
         return "index";
            

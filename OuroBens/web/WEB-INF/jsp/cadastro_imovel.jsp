@@ -18,23 +18,23 @@
         <form name="cadastro_imovel" action="olaMundo" method="POST" enctype="multipart/form-data">
             <div>
                 Nome:
-                <input type="text" name="nome" id="nome" required="">
+                <input type="text" name="nomeImovel" id="nomeImovel" required="">
             </div>
             <div>
                 Descrição:
-                <input type="text" name="descricao" id="descricao" required="">
+                <input type="text" name="descricaoImovel" id="descricaoImovel" required="">
             </div>
             <div>
                 Preço:
-                <input type="text" name="preco" id="preco" required="">
+                <input type="text" name="precoImovel" id="precoImovel" required="">
             </div>
             <div>
                 Endereço:
-                <input type="text" name="endereco" id="endereco" required="">
+                <input type="text" name="enderecoImovel" id="enderecoImovel" required="">
             </div>
             <div>
                 Fotos da residência:
-                <input type="file" name="imagem_residencia" id="imagem_residencia" required="">
+                <input type="file" name="caminhoImagemImovel" id="caminhoImagemImovel" required="">
             </div>
             <div>
                 <input type="submit" id="btn_enviar" value="Cadastrar" required="">
