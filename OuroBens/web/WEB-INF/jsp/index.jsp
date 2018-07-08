@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Olá, ${nomeImovel}, obrigado por cadastrar</h1>
+        <h1>Olá, ${retorno}, obrigado por cadastrar</h1>
     </body>
 </html>

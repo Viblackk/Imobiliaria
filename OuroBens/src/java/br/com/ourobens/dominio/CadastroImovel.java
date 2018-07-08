@@ -15,7 +15,6 @@ public class CadastroImovel {
     private String descricaoImovel;
     private String precoImovel;
     private String enderecoImovel;
-    private String caminhoImagemImovel;
 
     public String getNomeImovel() {
         return nomeImovel;
@@ -48,13 +47,5 @@ public class CadastroImovel {
     public void setEnderecoImovel(String enderecoImovel) {
         this.enderecoImovel = enderecoImovel;
     }
-
-    public String getCaminhoImagemImovel() {
-        return caminhoImagemImovel;
-    }
-
-    public void setCaminhoImagemImovel(String caminhoImagemImovel) {
-        this.caminhoImagemImovel = caminhoImagemImovel;
-    }
-    
+   
 }

@@ -33,10 +33,6 @@
                 <input type="text" name="enderecoImovel" id="enderecoImovel" required="">
             </div>
             <div>
-                Fotos da residência:
-                <input type="file" name="caminhoImagemImovel" id="caminhoImagemImovel" required="">
-            </div>
-            <div>
                 <input type="submit" id="btn_enviar" value="Cadastrar" required="">
             </div>
         </form>

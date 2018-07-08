@@ -5,6 +5,9 @@
  */
 package br.com.ourobens.controller;
 
+import br.com.ourobens.dao.CadastroDAO;
+import br.com.ourobens.dominio.CadastroImovel;
+import java.sql.SQLException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +22,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class OurobensController {
     
     @RequestMapping("/olaMundo")
-    public String ourobens(Model model, @RequestParam("nomeImovel") String nomeImovel){
+    public String ourobens(Model model, CadastroImovel cadastroImovel) throws Exception{
         
-        model.addAttribute("nomeImovel", nomeImovel);
+        CadastroDAO dao = new CadastroDAO();
+        
+        try {
+            dao.cadastraImovel(cadastroImovel);
+            
+            model.addAttribute("retorno", cadastroImovel.getNomeImovel());
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
         
         return "index";
            
