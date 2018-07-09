@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class OurobensController {
     
-    @RequestMapping("/olaMundo")
+    @RequestMapping("/cadastroSucesso")
     public String ourobens(Model model, CadastroImovel cadastroImovel) throws Exception{
         
         CadastroDAO dao = new CadastroDAO();
@@ -42,6 +42,19 @@ public class OurobensController {
     public String cadastro_imovel(){
         
         return "cadastro_imovel";
+        
+    }
+    
+    @RequestMapping("/listarImovel")
+    public String lista_imovel(Model model){
+        CadastroDAO dao = new CadastroDAO();
+        
+        try {
+            model.addAttribute("lista", dao.listarImovel());
+        } catch (Exception e) {
+        }
+        
+        return "listarImovel";
         
     }
     
